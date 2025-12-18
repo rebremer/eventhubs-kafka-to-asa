@@ -1,4 +1,4 @@
-# Kafka → Event Hubs → ASA (MI + Private Endpoints)
+# Kafka client → Event Hubs → ASA (MI + Private Endpoints)
 
 This sample is based on [Apache Kafka Confluent Python client using oauth](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/tutorials/oauth/python) and expanded to read data using Azure Stream Analytics using Managed Identies and Private Endpoints.
 
