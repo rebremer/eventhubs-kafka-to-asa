@@ -2,11 +2,7 @@
 
 This sample is based on [Apache Kafka Confluent Python client using oauth](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/tutorials/oauth/python) and expanded to read data using Azure Stream Analytics using Managed Identies and Private Endpoints.
 
-## Using Azure Active Directory authentication with Python and Event Hubs for Apache Kafka
-
-This tutorial will show how to create and connect to an Event Hubs Kafka endpoint using Azure Active Directory authentication. Azure Event Hubs for Apache Kafka supports [Apache Kafka version 1.0](https://kafka.apache.org/10/documentation.html) and later.
-
-Subsequently, data is read from Event Hubs using an Azure Stream Analytics (ASA) job running on an ASA cluster. The ASA job then writes the data to an Azure storage account. The Managed Identity of th ASA cluster is used to authenticate to Event Hubs and storage, the Managed VNET of the cluster is used to create private endpoints. The Kafka client can also be secured with private endpoints. If the clients runs on a laptop for test purposes, the IP address can be with listen on the Event Hubs firewall. See also image below.
+This tutorial will show how to create and connect to an Event Hubs Kafka endpoint using Azure Active Directory authentication. Azure Event Hubs for Apache Kafka supports [Apache Kafka version 1.0](https://kafka.apache.org/10/documentation.html) and later. Subsequently, data is read from Event Hubs using an Azure Stream Analytics (ASA) job running on an ASA cluster. The ASA job then writes the data to an Azure storage account. The Managed Identity of th ASA cluster is used to authenticate to Event Hubs and storage, the Managed VNET of the cluster is used to create private endpoints. The Kafka client can also be secured with private endpoints. If the clients runs on a laptop for test purposes, the IP address can be with listen on the Event Hubs firewall. See also image below.
 
 ![Event Hubs - ASA cluster architecture](./images/architecture.png)
 
@@ -33,7 +29,7 @@ In your streaming analytics job, add the Event Hubs as the source and Azure stor
 
 ![ASA job - read/write data](./images/ASA_job_readwrite_data.png)
 
-## Alternative Consumer - Fabric Streaming
+## Alternative Consumer - Fabric eventstreams
 
 Event Hubs integrate well in Microsoft Fabric. Data can be fetched in parallel from Event Hubs using Fabric streaming to do more advanced analytics. See this documentation how Event Hubs can be added to Fabric Streaming: https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/overview?tabs=enhancedcapabilities
 
