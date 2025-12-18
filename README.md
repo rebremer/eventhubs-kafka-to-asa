@@ -29,7 +29,7 @@ In your streaming analytics job, add the Event Hubs as the source and Azure stor
 
 ![ASA job - read/write data](./images/ASA_job_readwrite_data.png)
 
-## Alternative Consumers - Fabric eventstreams, Databricks Structured Streaming, ...
+## Alternative Consumers - Fabric eventstreams, Azure Databricks Structured Streaming, ...
 
 Event Hubs integrate well in Microsoft Fabric. Data can be fetched in parallel from Event Hubs using Fabric streaming to do more advanced analytics. See this documentation how Event Hubs can be added to Fabric Streaming: https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/overview?tabs=enhancedcapabilities
 
