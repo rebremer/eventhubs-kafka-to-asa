@@ -8,11 +8,11 @@ This tutorial will show how to create and connect to an Event Hubs Kafka endpoin
 
 ## Producer - Kafka client
 
-Event Hubs integrates with Azure Active Directory (Azure AD), which provides an OAuth 2.0 compliant authorization server. Azure role-based access control (Azure RBAC) can be used to grant permissions to Kafka client identities.
+Event Hubs integrates with Microsof Entra ID, which provides an OAuth 2.0 compliant authorization server. Azure role-based access control (Azure RBAC) can be used to grant permissions to Kafka client identities.
 
 To grant access to an Event Hubs resource, the security principal must be authenticated and an OAuth 2.0 token is returned. The token is then passed as part of the request to the Event Hubs service to authorize access to the resource. This is done by setting the appropriate values in the Kafka client configuration. On the Event Hubs, the role `Azure Event Hubs Data Sender` is needed such that the client is authorized to send data to Event Hubs.
 
-For more information on using Azure AD with Event Hubs, see [Authorize access with Azure Active Directory](https://docs.microsoft.com/en-us/azure/event-hubs/authorize-access-azure-active-directory#overview)
+For more information on using Microsoft Entra ID with Event Hubs, see [Authorize access with Microsoft Entra ID](https://docs.microsoft.com/en-us/azure/event-hubs/authorize-access-azure-active-directory#overview)
 
 In case the client is run on a virtual machine or containerized solution in a network, a private endpoint can be created. Subsequently, a managed identity can be used rather than a service principal. The library `DefaultAzureCredential` detects automatically what is used.
 
@@ -64,7 +64,7 @@ python -m pip install -r requirements.txt
 
 ### Configuring credentials
 
-In this example, a service principal is used for the AAD credential. This service principal must have the `Azure Event Hubs Data Sender` role (or equivalent) assigned on the target Event Hubs namespace. We configure `DefaultAzureCredential` by setting the following environment variables in the .env file (rename env.example to .env):
+In this example, a service principal is used for the Microsoft Entra ID credential. This service principal must have the `Azure Event Hubs Data Sender` role (or equivalent) assigned on the target Event Hubs namespace. We configure `DefaultAzureCredential` by setting the following environment variables in the .env file (rename env.example to .env):
 
 ```shell
 AZURE_TENANT_ID=<TenantID>
